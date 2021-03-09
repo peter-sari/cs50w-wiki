@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    No such an entry
+{% endblock %}
+
+{% block body %}
+    <h1>No such entry</h1>
+    <div>
+        <p>
+            Click <a href="{% url 'encyclopedia:create' %}">create</a> to generate a new page!
+        </p>
+    </div>
+
+{% endblock %}

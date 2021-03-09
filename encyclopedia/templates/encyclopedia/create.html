@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New entry
+{% endblock %}
+
+{% block body %}
+<p>Use <a href="https://www.markdownguide.org/" target="new">markdown</a> to complete the fields!</p>
+    <form action="{%url 'encyclopedia:create'%}" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{form.as_p }}
+        <input type="submit"  value="Create entry">
+    </form>
+{% endblock %}
